@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - Entre Libros</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style3.css">
+</head>
+<body>
+    <!-- Header con navegación -->
+    <header>
+        <div class="subHeader">
+            <p>Envío Gratis en compras desde los $30.000</p>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="/index.html">
+                <i class="fas fa-book-open"></i>
+                <span class="brand-text">Entre Libros</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="nav nav-pills ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="/index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="productos.html">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="resenas.html">Reseñas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sección de Filtros -->
+    <section class="filtros-section py-4 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <div class="d-flex flex-wrap gap-2">
+                        <button class="btn btn-outline-primary me-2 mb-2">Todos</button>
+                        <button class="btn btn-outline-primary me-2 mb-2">Ficción</button>
+                        <button class="btn btn-outline-primary me-2 mb-2">No Ficción</button>
+                        <button class="btn btn-outline-primary me-2 mb-2">Infantil</button>
+                        <button class="btn btn-outline-primary me-2 mb-2">Académicos</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Buscar libros...">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="button">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catálogo de Productos -->
+    <section class="productos-section py-5">
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <!-- Producto 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card">
+                        <div class="product-badge bestseller">Bestseller</div>
+                        <div class="product-image">
+                            <img src="/img/gabriel1.jpg" alt="Libro 1">
+                            <div class="product-overlay">
+                                <button class="btn btn-light btn-sm quick-view">
+                                    <i class="fas fa-eye"></i> Vista rápida
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-details">
+                            <h5 class="product-title">En Agosto Nos Vemos</h5>
+                            <p class="product-author">Gabriel García Márquez</p>
+                            <div class="product-price-container">
+                                <span class="product-price">$25.990</span>
+                                <button class="btn btn-primary add-to-cart">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Producto 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card">
+                        <div class="product-badge sale">Oferta</div>
+                        <div class="product-image">
+                            <img src="/img/anna1.jpg" alt="Libro 2">
+                            <div class="product-overlay">
+                                <button class="btn btn-light btn-sm quick-view">
+                                    <i class="fas fa-eye"></i> Vista rápida
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-details">
+                            <h5 class="product-title">Diario</h5>
+                            <p class="product-author">Anna Frank</p>
+                            <div class="product-price-container">
+                                <div class="price-wrapper">
+                                    <span class="product-price-old">$22.990</span>
+                                    <span class="product-price sale">$18.990</span>
+                                </div>
+                                <button class="btn btn-primary add-to-cart">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Producto 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card">
+                        <div class="product-badge new">Nuevo</div>
+                        <div class="product-image">
+                            <img src="/img/florencia1.jpg" alt="Libro 3">
+                            <div class="product-overlay">
+                                <button class="btn btn-light btn-sm quick-view">
+                                    <i class="fas fa-eye"></i> Vista rápida
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-details">
+                            <h5 class="product-title">La Casa Neville</h5>
+                            <p class="product-author">Florencia Bonelli</p>
+                            <div class="product-price-container">
+                                <span class="product-price">$15.990</span>
+                                <button class="btn btn-primary add-to-cart">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4 mb-4">
+                <!-- Producto 4 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card">
+                        <div class="product-badge new">Nuevo</div>
+                        <div class="product-image">
+                            <img src="/img/stephen1.jpg" alt="Stephen King">
+                            <div class="product-overlay">
+                                <button class="btn btn-light btn-sm quick-view">
+                                    <i class="fas fa-eye"></i> Vista rápida
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-details">
+                            <h5 class="product-title">Si Te La Oscuridad</h5>
+                            <p class="product-author">Stephen King</p>
+                            <div class="product-price-container">
+                                <span class="product-price">$12.990</span>
+                                <button class="btn btn-primary add-to-cart">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Producto 5 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card">
+                        <div class="product-badge sale">Oferta</div>
+                        <div class="product-image">
+                            <img src="/img/camus1.jpg" alt="Libro 5">
+                            <div class="product-overlay">
+                                <button class="btn btn-light btn-sm quick-view">
+                                    <i class="fas fa-eye"></i> Vista rápida
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-details">
+                            <h5 class="product-title">El Extranjero</h5>
+                            <p class="product-author">Albert Camus</p>
+                            <div class="product-price-container">
+                                <span class="product-price">$19.990</span>
+                                <button class="btn btn-primary add-to-cart">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Producto 6 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card">
+                        <div class="product-badge new">Nuevo</div>
+                        <div class="product-image">
+                            <img src="/img/lauren1.jpg" alt="Libro 6">
+                            <div class="product-overlay">
+                                <button class="btn btn-light btn-sm quick-view">
+                                    <i class="fas fa-eye"></i> Vista rápida
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-details">
+                            <h5 class="product-title">Amor y Otras Palabras</h5>
+                            <p class="product-author">Christina Lauren</p>
+                            <div class="product-price-container">
+                                <span class="product-price">$29.990</span>
+                                <button class="btn btn-primary add-to-cart">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center mt-5">
+        <p>&copy; 2024 Entre Libros. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
