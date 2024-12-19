@@ -31,11 +31,42 @@
                     <li class="nav-item"><a class="nav-link active" href="productos.html">Productos</a></li>
                     <li class="nav-item"><a class="nav-link" href="resenas.html">Reseñas</a></li>
                     <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#cartModal">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="badge badge-danger cart-counter">0</span>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </nav>
     </header>
 
+    <!-- Modal del Carrito -->
+    <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cartModalLabel">Carrito de Compras</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="cart-items">
+                        <!-- Los items del carrito se generarán dinámicamente con JavaScript -->
+                    </div>
+                    <div class="cart-total-container">
+                        <strong>Total:</strong> <span class="cart-total">$0</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Seguir comprando</button>
+                    <button type="button" class="btn btn-primary" id="finishPurchaseBtn">Finalizar Compra</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Sección de Filtros -->
     <section class="filtros-section py-4 bg-light">
         <div class="container">
@@ -64,165 +95,15 @@
     </section>
 
     <!-- Catálogo de Productos -->
+
     <section class="productos-section py-5">
-        <div class="container">
-            <div class="row g-4 mb-4">
-                <!-- Producto 1 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="product-card">
-                        <div class="product-badge bestseller">Bestseller</div>
-                        <div class="product-image">
-                            <img src="/img/gabriel1.jpg" alt="Libro 1">
-                            <div class="product-overlay">
-                                <button class="btn btn-light btn-sm quick-view">
-                                    <i class="fas fa-eye"></i> Vista rápida
-                                </button>
-                            </div>
-                        </div>
-                        <div class="product-details">
-                            <h5 class="product-title">En Agosto Nos Vemos</h5>
-                            <p class="product-author">Gabriel García Márquez</p>
-                            <div class="product-price-container">
-                                <span class="product-price">$25.990</span>
-                                <button class="btn btn-primary add-to-cart">
-                                    <i class="fas fa-shopping-cart"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Producto 2 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="product-card">
-                        <div class="product-badge sale">Oferta</div>
-                        <div class="product-image">
-                            <img src="/img/anna1.jpg" alt="Libro 2">
-                            <div class="product-overlay">
-                                <button class="btn btn-light btn-sm quick-view">
-                                    <i class="fas fa-eye"></i> Vista rápida
-                                </button>
-                            </div>
-                        </div>
-                        <div class="product-details">
-                            <h5 class="product-title">Diario</h5>
-                            <p class="product-author">Anna Frank</p>
-                            <div class="product-price-container">
-                                <div class="price-wrapper">
-                                    <span class="product-price-old">$22.990</span>
-                                    <span class="product-price sale">$18.990</span>
-                                </div>
-                                <button class="btn btn-primary add-to-cart">
-                                    <i class="fas fa-shopping-cart"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Producto 3 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="product-card">
-                        <div class="product-badge new">Nuevo</div>
-                        <div class="product-image">
-                            <img src="/img/florencia1.jpg" alt="Libro 3">
-                            <div class="product-overlay">
-                                <button class="btn btn-light btn-sm quick-view">
-                                    <i class="fas fa-eye"></i> Vista rápida
-                                </button>
-                            </div>
-                        </div>
-                        <div class="product-details">
-                            <h5 class="product-title">La Casa Neville</h5>
-                            <p class="product-author">Florencia Bonelli</p>
-                            <div class="product-price-container">
-                                <span class="product-price">$15.990</span>
-                                <button class="btn btn-primary add-to-cart">
-                                    <i class="fas fa-shopping-cart"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row g-4 mb-4">
-                <!-- Producto 4 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="product-card">
-                        <div class="product-badge new">Nuevo</div>
-                        <div class="product-image">
-                            <img src="/img/stephen1.jpg" alt="Stephen King">
-                            <div class="product-overlay">
-                                <button class="btn btn-light btn-sm quick-view">
-                                    <i class="fas fa-eye"></i> Vista rápida
-                                </button>
-                            </div>
-                        </div>
-                        <div class="product-details">
-                            <h5 class="product-title">Si Te La Oscuridad</h5>
-                            <p class="product-author">Stephen King</p>
-                            <div class="product-price-container">
-                                <span class="product-price">$12.990</span>
-                                <button class="btn btn-primary add-to-cart">
-                                    <i class="fas fa-shopping-cart"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Producto 5 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="product-card">
-                        <div class="product-badge sale">Oferta</div>
-                        <div class="product-image">
-                            <img src="/img/camus1.jpg" alt="Libro 5">
-                            <div class="product-overlay">
-                                <button class="btn btn-light btn-sm quick-view">
-                                    <i class="fas fa-eye"></i> Vista rápida
-                                </button>
-                            </div>
-                        </div>
-                        <div class="product-details">
-                            <h5 class="product-title">El Extranjero</h5>
-                            <p class="product-author">Albert Camus</p>
-                            <div class="product-price-container">
-                                <span class="product-price">$19.990</span>
-                                <button class="btn btn-primary add-to-cart">
-                                    <i class="fas fa-shopping-cart"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Producto 6 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="product-card">
-                        <div class="product-badge new">Nuevo</div>
-                        <div class="product-image">
-                            <img src="/img/lauren1.jpg" alt="Libro 6">
-                            <div class="product-overlay">
-                                <button class="btn btn-light btn-sm quick-view">
-                                    <i class="fas fa-eye"></i> Vista rápida
-                                </button>
-                            </div>
-                        </div>
-                        <div class="product-details">
-                            <h5 class="product-title">Amor y Otras Palabras</h5>
-                            <p class="product-author">Christina Lauren</p>
-                            <div class="product-price-container">
-                                <span class="product-price">$29.990</span>
-                                <button class="btn btn-primary add-to-cart">
-                                    <i class="fas fa-shopping-cart"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="container">
+        <div class="row g-4 mb-4">
+            <!-- Los productos se generarán dinámicamente aquí -->
         </div>
-    </section>
+    </div>
+</section>
+
 
     <!-- Footer -->
     <footer class="text-center mt-5">
@@ -237,5 +118,8 @@
     <script>
         AOS.init();
     </script>
+    
+    <!-- Agregar el script.js al final del body -->
+    <script src="../script.js"></script>
 </body>
 </html>
