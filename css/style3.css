@@ -499,11 +499,11 @@ footer {
     background-color: #007bff;
 }
 
-.product-badge.sale {
+.product-badge.oferta {
     background-color: #dc3545;
 }
 
-.product-badge.new {
+.product-badge.nuevo {
     background-color: #28a745;
 }
 
@@ -815,4 +815,132 @@ footer {
     color: white;
     padding: var(--spacing-unit);
     margin-top: 50px;
+}
+
+.cart-counter {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    padding: 2px 6px;
+    border-radius: 50%;
+    font-size: 0.7rem;
+}
+
+.cart-items .cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-items .cart-item img {
+    width: 80px;
+    margin-right: 15px;
+}
+
+.cart-item .quantity-control {
+    display: flex;
+    align-items: center;
+}
+
+.cart-item .quantity-control button {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    margin: 0 5px;
+}
+
+.cart-total-container {
+    text-align: right;
+    padding: 15px;
+    font-size: 1.2rem;
+}
+
+/* Estilos para notificaciones */
+.notification-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.notification {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
+    padding: 10px;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.3s ease;
+}
+
+.notification.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.notification img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+.notification .close-notification {
+    background: none;
+    border: none;
+    font-size: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* Modal de vista rápida */
+.modal.fade.show {
+    display: block;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.checkout-summary {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+}
+
+.order-items {
+    margin: 10px 0;
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+.order-total {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #dee2e6;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.invalid-feedback {
+    display: none;
+}
+
+.is-invalid {
+    border-color: #dc3545;
+}
+
+.is-invalid + .invalid-feedback {
+    display: block;
+    color: #dc3545;
 }
