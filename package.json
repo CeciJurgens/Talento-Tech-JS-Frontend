@@ -1,0 +1,25 @@
+{
+  "name": "dw-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "lint:html": "htmlhint --config tests/.htmlhintrc '**/*.html'",
+    "lint:css": "stylelint --config tests/.stylelintrc.json '**/*.css'",
+    "lint:html2": "node tests/checkTags.js",
+    "lint:combined": "npm-run-all --continue-on-error lint:html lint:html2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/jsdom": "^21.1.7",
+    "htmlhint": "^1.1.4",
+    "npm-run-all": "^4.1.5",
+    "stylelint": "^16.9.0",
+    "stylelint-config-standard": "^36.0.1"
+  },
+  "dependencies": {
+    "jsdom": "^25.0.1"
+  }
+}
